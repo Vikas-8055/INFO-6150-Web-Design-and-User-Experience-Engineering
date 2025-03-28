@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rent Nest</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <style>
+        
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #333;
+            padding: 10px;
+        }
+
+        header h1 {
+            color: white;
+            font-size: 35px;
+            margin: 0;
+        }
+
+        
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-left: 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 16px;
+            background-color: #555;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        nav ul li a:hover {
+            background-color: #777;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        table, th, td {
+            border: 1px solid #333;
+            padding: 10px;
+        }
+
+        
+        footer {
+            background-color: grey;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+       
+        img {
+            height: auto;        
+            display: block;       
+            margin: 0 auto;       
+        }
+
+       
+        #media {
+            display: flex;       
+            justify-content: space-between; 
+            align-items: center;  
+            flex-wrap: wrap;      
+            padding: 10px;
+        }
+
+       
+        #media img {
+            flex: 1 1 30%;       
+            margin: 10px;       
+            max-width: 100%;    
+            height: auto;      
+        }
+
+       
+        details {
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        summary {
+            cursor: pointer;
+            font-weight: bold;
+            background-color: #f0f0f0;
+            padding: 5px;
+            border-radius: 5px;
+        }
+
+        summary:hover {
+            background-color: #e0e0e0;
+        }
+    </style>
+</head>
+<body>
+
+
+<header>
+    <h1>Rent Nest</h1>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#media">Media</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+        </ul>
+    </nav>
+</header>
+
+
+<main>
+   
+    <section id="home">
+        <h2>Welcome to Rent Nest</h2>
+        <p>Your one-stop solution for finding the perfect apartment. Explore our listings and services to find your ideal home.</p>
+    </section>
+
+
+    <section id="about">
+        <h2>About Us</h2>
+        <p>Find your perfect apartment with ease! We offer a curated selection of urban rentals, detailed listings, and easy contact options for landlords. Your ideal home is just a click away... 🏠</p>
+    </section>
+
+  
+    <section id="services">
+        <h2>Our Services</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Apartment Type</th>
+                    <th>Size (sq ft)</th>
+                    <th>Rent (per month)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Studio</td>
+                    <td>400 - 600</td>
+                    <td>$1,200 - $1,500</td>
+                </tr>
+                <tr>
+                    <td>1 Bedroom</td>
+                    <td>600 - 850</td>
+                    <td>$1,600 - $2,000</td>
+                </tr>
+                <tr>
+                    <td>2 Bedroom</td>
+                    <td>850 - 1,200</td>
+                    <td>$2,200 - $2,800</td>
+                </tr>
+                <tr>
+                    <td>3 Bedroom</td>
+                    <td>1,200 - 1,600</td>
+                    <td>$3,000 - $3,800</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    
+    <section id="media">
+        <h2>Media</h2>
+        
+       
+        <img src="images/outdoor.jpg" alt="Outdoor view of the apartment" style="width: 30%; margin: 5px;">
+        
+       
+        <img src="images/exterior.jpg" alt="Exterior view of the apartment" style="width: 30%; margin: 5px;">
+        
+       
+        <img src="images/apartment-photo.jpg" alt="Image related to your site" style="width: 30%; margin: 5px;">
+
+       
+        <audio controls>
+            <source src="audio.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+
+        
+        <video width="400" height="400" controls>
+            <source src="videos/apartment.mp4" type="video/mp4">
+        </video>
+    </section>
+
+   
+    <p>
+        Watch a sample tour of an apartment here: 
+        <a href="https://youtu.be/7Xa4Gu-icak?si=OI21TJWWbVj5jjgq" target="_blank">Apartment Tour Video</a>
+    </p>
+
+    
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <form action="mailto:vikasraomeneni@gmail.com" method="post" enctype="text/plain">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name"><br><br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email"><br><br>
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" name="phone"><br><br>
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+
+   
+    <section id="details">
+        <h2>FAQ'S</h2>
+        <details>
+            <summary>What types of apartments are available?</summary>
+            <p>We offer various types of apartments including Studios, 1 Bedroom, 2 Bedroom, and 3 Bedroom apartments. Each type comes with different sizes and rent prices to suit your needs.</p>
+        </details>
+
+        <details>
+            <summary>How can I schedule a viewing?</summary>
+            <p>You can schedule a viewing by contacting us through the "Contact Us" form on our website, or by calling us directly at 617-398-6945. Our team will assist you in setting up an appointment.</p>
+        </details>
+
+        <details>
+            <summary>What is the process for applying for an apartment?</summary>
+            <p>To apply for an apartment, fill out the application form on our website, provide necessary documents, and submit them for review. Our team will get back to you with further instructions.</p>
+        </details>
+
+        <details>
+            <summary>Do you offer any special discounts or promotions?</summary>
+            <p>We occasionally offer special discounts and promotions. Keep an eye on our website and sign up for our newsletter to stay updated on any current offers.</p>
+        </details>
+    </section>
+</main>
+
+
+<footer>
+    <p class="footer-text">&copy; Rent Nest. All rights reserved.</p>
+    <p class="footer-contact">
+        <a href="mailto:vikasraomeneni@gmail.com">info@rentnest.com</a> | 
+        Call us at <a href="tel:+6173986945">617 398 6945</a>
+    </p>
+</footer>
