@@ -1,0 +1,58 @@
+<title>Feedback</title>
+<style>
+    table, th, td{
+        border: 5px solid black;
+        background-color: beige;
+    }
+
+    th{
+        font-size: larger;
+    }
+</style>
+<h1> Data </h1>
+<body>
+<script>
+
+function createATable() {
+    const body = document.body,
+    tableCreateEle = document.createElement('table');
+    tableCreateEle.style.width = '500px';
+    tableCreateEle.style.border = '1px solid black';
+    var firstName = window.localStorage.getItem("phoneNumber");
+    var topics = ["Title", "First Name", "Last Name", "Email ID", "Phone Number", "Address 1", "Address 2", "City", "State", "Zip Code", 
+                  "Drink", "Upgrade", "Feel about it?", "Social Media", "Comments"];
+    var values = [window.localStorage.getItem("title"),
+                  window.localStorage.getItem("firstName"),
+                  window.localStorage.getItem("lastName"),
+                  window.localStorage.getItem("emailId"),
+                  window.localStorage.getItem("phoneNumber"),
+                  window.localStorage.getItem("streetAddress1"),
+                  window.localStorage.getItem("streetAddress2"),
+                  window.localStorage.getItem("city"),
+                  window.localStorage.getItem("state"),
+                  window.localStorage.getItem("zipcode"),
+                  window.localStorage.getItem("subject"),
+                  window.localStorage.getItem("professor"),
+                  window.localStorage.getItem("randomTextBox"),
+                  window.localStorage.getItem("socialmedia"),
+                  window.localStorage.getItem("comments")]
+    for (let i = 0; i < 15; i++) {
+      const tr = tableCreateEle.insertRow();
+      for (let j = 0; j < 2; j++) {
+          const td = tr.insertCell();
+          if(j==0){
+            td.appendChild(document.createTextNode(topics[i]));
+            td.style.border = '1px solid black';
+          }
+          if(j==1){
+            td.appendChild(document.createTextNode(values[i]));
+            td.style.border = '1px solid black';
+          }
+      }
+    }
+    body.appendChild(tableCreateEle);
+  }
+createATable();
+  
+</script>
+</body>

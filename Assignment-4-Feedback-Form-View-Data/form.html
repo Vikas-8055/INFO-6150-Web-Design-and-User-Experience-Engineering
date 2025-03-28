@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Feedback</title>
+   
+    <style>
+        label {
+            float: left;
+            width: 150px;
+        }
+
+        #container {
+            width: 700px;
+            margin: auto;
+            background-color: beige;
+        }
+
+        main {
+            padding: 50px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="container">
+
+        <main>
+            <h2>Feeback</h2>
+            <h3>Love something? Hate something? Let us know!</h3>
+            Note : Fields marked with an asterisk(*) are mandatory
+            <br><br>
+            <form method="post" id="basic-form" novalidate>
+                <label>Title*:</label>
+                <input type="radio" name="title" id="miss" value="miss" onclick="toCheck(this)"
+                    required="required" />Miss
+                <input type="radio" name="title" id="mr" value="mr" onclick="toCheck(this)" required="required" />Mr.
+                <input type="radio" name="title" id="mrs" value="mrs" onclick="toCheck(this)" required="required" />Mrs.
+                <br><br>
+                <label for="firstName">First Name*:</label>
+                <input type="text" name="firstName" id="firstName" placeholder="First Name" required />
+                <br>
+                <div id="error_firstName" style="display: none; color: red;">Please enter First Name</div>
+                <br>
+
+                <label for="lastName">Last Name*:</label>
+                <input type="text" name="lastName" id="lastName" placeholder="Last Name" />
+                <br>
+                <div id="error_lastName" style="display: none; color: red;">Please enter Last Name</div>
+                <br>
+
+
+
+                <label for="emailId">Email Id*:</label>
+                <input type="text" name="emailId" id="emailId" placeholder="yourname@domain.com" />
+                <br>
+                <div id="error_emailId" style="display: none; color: red;">Invalid Email</div>
+                <br>
+
+
+                <label for="phoneNumber">Phone Number*:</label>
+                <input type="text" name="phoneNumber" id="phoneNumber" placeholder="xxx-xxx-xxxx" />
+                <br>
+                <div id="error_phoneNumber" style="display: none; color: red;">Invalid Phone</div>
+                <br>
+
+                <label for="streetAddress1">Street Address 1*:</label>
+                <input type="text" name="streetAddress1" id="streetAddress1" placeholder="Address" />
+                <br>
+                <div id="error_streetAddress1" style="display: none; color: red;">Please fill the address</div>
+                <br>
+
+                <label for="streetAddress2">Street Address 2:</label>
+                <input type="text" name="streetAddress2" id="streetAddress2" placeholder="address" />
+                <br><br>
+
+                <label for="city">City*:</label>
+                <input type="text" name="city" id="city" placeholder="city" />
+                <br>
+                <div id="error_city" style="display: none; color: red;">Please fill the city name</div>
+                <br>
+
+                <label for="state">State*:</label>
+                <input type="text" name="state" id="state" placeholder="state" />
+                <br>
+                <div id="error_state" style="display: none; color: red;">Please fill the state name</div>
+                <br>
+
+                <label for="zipcode">ZipCode*:</label>
+                <input type="text" name="zipcode" id="zipcode" placeholder="xxxxx or xxxxx-xxxx" />
+                <br>
+                <div id="error_zipcode" style="display: none; color: red;">Please fill the zipcode</div>
+                <br>
+
+                <label for="drink"> Drink*</label>
+
+                <select name="drink" id="drink" onselect="chooseTheValue(this)">
+                    <option value="none">--Please choose a drink--</option>
+                    <option value="Cappuccino">Cappuccino</option>
+                    <option value="Macchiato">Macchiato</option>
+                    <option value="Ristretto">Ristretto</option>
+                    <option value="Americano">Americano</option>
+                    <option value="mocha">Mocha</option>
+                </select>
+                <br><br>
+                <input type="checkbox" name="source" id="radio-one" onclick="showRadioBox(this)"
+                    style="display: none;" />
+                <div id="error_radiobox" style="display: none; color: red;">Check an option</div>
+
+                <br> <br>
+                <div style="display:none" id="text-box">
+                    <label>Add additional costumizations:*</label>
+                    <textarea type="text" name="randomTextBox" id="randomTextBox" placeholder="Your Customizations, Write N/A if none" rows="5" cols="25" required ></textarea>
+                    <div id="error_randomTextBox" style="display: none; color: red;">Invalid</div>
+
+                </div>
+                <br> 
+                <label for="zipcode">How did you hear*:</label>
+                <input type='checkbox' name="source" value="facebook" onclick="socialCheckBoxes(this)" /> Facebook
+                <input type='checkbox' name="source" value="google" onclick="socialCheckBoxes(this)" /> Google
+                <input type='checkbox' name="source" value="yelp" onclick="socialCheckBoxes(this)" /> Yelp
+                <br>
+                <div id="socialMedia" style="display: none; color: red;">Please check any option</div>
+                <br>
+
+                <label for="comments">Comments*:</label>
+                <textarea name="text" id="comments" placeholder="Your comments" rows="5" cols="25"></textarea>
+                <br>
+                <div id="error_comments" style="display: none; color: red;">Please enter</div>
+                <br>
+                <input type="Submit" id="submit-btn">
+                <input type="Reset" id="reset-btn">
+                <br><br>
+            </form>
+        </main>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
