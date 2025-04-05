@@ -1,0 +1,30 @@
+.navbar_container {
+
+  display: flex;
+  justify-content: flex-end;
+  
+  gap: 2rem;
+  align-items: center;
+  padding: 0 1rem;
+  
+  background-image: linear-gradient(to top, #61430e 0%, #302845 100%);
+ background-blend-mode: multiply,multiply;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
+  height: 60px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+.navbar_element {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 500;
+  transition: all 0.3s ease-in-out;
+}
+.navbar_element:hover {
+  color: #158fd0;
+  cursor: pointer;
+}
