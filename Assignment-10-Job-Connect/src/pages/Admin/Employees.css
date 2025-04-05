@@ -1,0 +1,80 @@
+.employees-container {
+  padding: 2rem;
+  background-color: #96e6a1; 
+  min-height: 100vh; 
+  font-family: "Poppins", sans-serif;
+  color: #333;
+}
+
+.employees-container h1 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  color: #2d2e36;
+}
+
+.employees-container table {
+  width: 100%;
+  border-collapse: collapse; 
+  background-color: #ffffff; 
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+  border-radius: 8px;
+  overflow: hidden; 
+  margin: 0 auto; 
+  max-width: 800px;
+}
+
+.employees-container thead {
+  background-color: #2d2e36; 
+  color: #ffffff; 
+}
+
+.employees-container thead th {
+  text-align: left;
+  padding: 1rem;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05rem;
+}
+
+.employees-container tbody tr {
+  border-bottom: 1px solid #ddd; 
+}
+
+.employees-container tbody tr:nth-child(even) {
+  background-color: #f9f9f9; 
+}
+
+.employees-container tbody tr:hover {
+  background-color: #f1f1f1; 
+}
+
+.employees-container tbody td {
+  padding: 1rem;
+  font-size: 1rem;
+  color: #555;
+}
+
+@media (max-width: 768px) {
+  .employees-container table {
+    width: 100%; 
+  }
+
+  .employees-container thead {
+    display: none; 
+  }
+
+  .employees-container tbody td {
+    display: block;
+    text-align: right;
+    border-bottom: 1px solid #ddd;
+    padding: 0.8rem 0.5rem;
+  }
+
+  .employees-container tbody td:before {
+    content: attr(data-label);
+    float: left;
+    font-weight: bold;
+    color: #333;
+  }
+}
