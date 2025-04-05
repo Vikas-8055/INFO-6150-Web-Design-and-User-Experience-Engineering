@@ -1,0 +1,23 @@
+header {
+    background: $primary-color;
+    color: $white;
+    padding: $base-padding;
+    text-align: center;
+
+    nav {
+        ul {
+            list-style-type: none;
+            padding: 0;
+
+            li {
+                display: inline;
+                margin-right: $base-margin;
+
+                a {
+                    color: $white;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}

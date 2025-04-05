@@ -1,0 +1,5 @@
+.service-card {
+    @extend %card; 
+    padding: 15px;
+    margin: $base-margin;
+}
