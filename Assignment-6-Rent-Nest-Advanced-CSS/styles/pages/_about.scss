@@ -1,0 +1,16 @@
+.about {
+    padding: $base-padding;
+    text-align: center;
+    
+    h2 {
+        font-size: 2rem;
+        color: $primary-color;
+        margin-bottom: $base-margin;
+    }
+    
+    p {
+        font-size: 1.125rem;
+        color: $dark-gray;
+        margin-bottom: $base-margin;
+    }
+}

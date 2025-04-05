@@ -1,0 +1,23 @@
+
+$button-states: primary, secondary, success, danger;
+
+
+@each $state in $button-states {
+    .button {
+        background-color: $primary-color; 
+        color: $white;
+        padding: $base-padding;
+        border: none;
+        border-radius: $border-radius;
+        cursor: pointer;
+
+        &:hover {
+            background-color: darken(map-get((
+                primary: $primary-color,
+                secondary: #6c757d,
+                success: #28a745,
+                danger: #dc3545
+            ), $state), 10%);
+        }
+    }
+}

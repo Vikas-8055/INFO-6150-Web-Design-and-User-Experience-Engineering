@@ -1,0 +1,30 @@
+.contact {
+    padding: $base-padding;
+    text-align: center;
+
+    h2 {
+        font-size: 2rem;
+        color: $primary-color;
+        margin-bottom: $base-margin;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        input, textarea {
+            width: 100%;
+            max-width: 400px;
+            padding: $base-padding;
+            margin-bottom: $base-margin;
+            border: 1px solid $dark-gray;
+            border-radius: $border-radius;
+        }
+
+        button {
+            @extend .button; 
+            margin-top: $base-margin;
+        }
+    }
+}

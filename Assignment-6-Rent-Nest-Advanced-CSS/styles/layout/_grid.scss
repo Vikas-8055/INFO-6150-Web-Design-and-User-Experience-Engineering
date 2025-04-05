@@ -1,0 +1,4 @@
+.content {
+    @include grid-layout(2);
+    margin: $base-margin;
+}
