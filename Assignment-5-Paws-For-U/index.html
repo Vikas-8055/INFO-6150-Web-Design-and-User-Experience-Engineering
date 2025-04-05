@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paws4U</title>
+    <link rel="icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="index.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body data-bs-spy="scroll" data-bs-target="#navbarNav" data-bs-offset="100" tabindex="0">
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top shadow-sm" id="navbarNav">
+            <div class="container-fluid">
+                <a class="navbar-brand d-flex align-items-center" href="#">
+                    <img src="images/logo1.jpg" class="logo-img me-2" alt="Logo">
+                    <div class="paws"><span>Paws <span class="four">4<span class="you">U</span></span></span></div>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="#mission">Our Mission</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#adopt">Adopt a Dog</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#questions">Questions</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contact">Contact Us</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                More
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="#volunteer">Volunteer</a></li>
+                                <li><a class="dropdown-item" href="#donate">Donate</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="#events">Events</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">PAWSforU Menu</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                <li class="nav-item"><a class="nav-link" href="#mission">Our Mission</a></li>
+                <li class="nav-item"><a class="nav-link" href="#adopt">Adopt a Dog</a></li>
+                <li class="nav-item"><a class="nav-link" href="#questions">Questions</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact">Contact Us</a></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="offcanvasDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        More
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="offcanvasDropdown">
+                        <li><a class="dropdown-item" href="#volunteer">Volunteer</a></li>
+                        <li><a class="dropdown-item" href="#donate">Donate</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#events">Events</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="container mt-4">
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            <strong>Welcome to PAWSforU!</strong> Your interest in adopting is greatly appreciated. Together, we can make a difference!
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    </div>
+
+    <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+        <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header">
+                <img src="images/favicon.ico" class="rounded me-2" alt="..." width="20">
+                <strong class="me-auto">PAWSforU</strong>
+                <small>Just now</small>
+                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="toast-body">
+                Thank you for visiting PAWSforU! Let us know if you have any questions.
+            </div>
+        </div>
+    </div>
+
+    <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="container-fluid bg-primary text-white text-center py-5 mb-5">
+                    <div class="container">
+                        <h2 class="display-4">..BECAUSE THEIR LIVES MATTER..</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="container-fluid bg-secondary text-white text-center py-5 mb-5">
+                    <div class="container">
+                        <h2 class="display-4">Adopt, Don't Shop!</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <section id="mission" class="container my-5">
+        <div class="row">
+            <div class="col-md-6">
+                <h2>Our Mission</h2>
+                <p>PAWSforU is redefining the meaning and importance of quality of life for all sheltered dogs by improving their experience through playgroups and individualized training, resulting in urgent and responsible lifesaving.</p>
+                <button type="button" class="btn btn-secondary" data-bs-toggle="popover" title="Mission Details" data-bs-content="Our mission focuses on improving the lives of sheltered dogs through enrichment and training.">Learn More</button>
+            </div>
+            <div class="col-md-6">
+                <h2>Our Vision</h2>
+                <p>PAWSforU has served hundreds of thousands of dogs in shelters through playgroup seminars and enrichment programs. By helping shelters improve the quality of life for their dogs, more dogs will be adopted and fewer will fall through the cracks.</p>
+                <p>By investing in canine enrichment through behavioral intervention, PAWSforU is committed to tackling the "end game" of animal welfare by attending to the emotional well-being of all sheltered dogs from the day they arrive until the day they go home.</p>
+                <button type="button" class="btn btn-secondary" data-bs-toggle="popover" title="Vision Details" data-bs-content="Our vision is to ensure every dog in shelters receives proper care and finds a loving home.">Learn More</button>
+            </div>
+        </div>
+        <div class="card mt-4">
+            <div class="card-body">
+                <h3 class="card-text text-center"><span>“Our programs stress the consideration of the whole dog – physically, emotionally and behaviorally. We treat all animals as individuals.”<br>
+                – Aimee Sadler, Founder & CEO</span></h3>
+            </div>
+        </div>
+    </section>
+
+    <section id="adopt" class="container my-5">
+        <h2 class="text-center">Adopt a Dog</h2>
+        <p class="text-center">Meet some of our adorable dogs available for adoption:</p>
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+            <div class="col">
+                <div class="card h-100">
+                    <img src="images/dog1.jpeg" class="card-img-top" alt="Buddy" height="200">
+                    <div class="card-body">
+                        <h5 class="card-title">Buddy <span class="badge bg-success">Available</span></h5>
+                        <p class="card-text">Breed: Golden Retriever<br>Age: 3 Years</p>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#adoptModal">Adopt Me</button>
+                        <button type="button" class="btn btn-info mt-2" data-bs-toggle="popover" title="Buddy's Details" data-bs-content="Buddy is a friendly Golden Retriever, perfect for families.">More Info</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <img src="images/dog2.jpg" class="card-img-top" alt="Lucy" height="200">
+                    <div class="card-body">
+                        <h5 class="card-title">Lucy <span class="badge bg-success">Available</span></h5>
+                        <p class="card-text">Breed: Labrador<br>Age: 2 Years</p>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#adoptModal">Adopt Me</button>
+                        <button type="button" class="btn btn-info mt-2" data-bs-toggle="popover" title="Lucy's Details" data-bs-content="Lucy is an energetic Labrador who loves to play.">More Info</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <img src="images/dog3.jpg" class="card-img-top" alt="Snowy" height="200">
+                    <div class="card-body">
+                        <h5 class="card-title">Snowy <span class="badge bg-success">Available</span></h5>
+                        <p class="card-text">Breed: Husky<br>Age: 3 Years</p>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#adoptModal">Adopt Me</button>
+                        <button type="button" class="btn btn-info mt-2" data-bs-toggle="popover" title="Snowy's Details" data-bs-content="Snowy is a beautiful Husky who loves the outdoors.">More Info</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <img src="images/dog4.jpg" class="card-img-top" alt="Honey" height="200">
+                    <div class="card-body">
+                        <h5 class="card-title">Honey <span class="badge bg-success">Available</span></h5>
+                        <p class="card-text">Breed: Pomeranian<br>Age: 5 Years</p>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#adoptModal">Adopt Me</button>
+                        <button type="button" class="btn btn-info mt-2" data-bs-toggle="popover" title="Honey's Details" data-bs-content="Honey is a gentle Pomeranian who loves to cuddle.">More Info</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <img src="images/dog5.jpeg" class="card-img-top" alt="Sparky" height="200">
+                    <div class="card-body">
+                        <h5 class="card-title">Sparky <span class="badge bg-success">Available</span></h5>
+                        <p class="card-text">Breed: German Shepherd<br>Age: 4 Years</p>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#adoptModal">Adopt Me</button>
+                        <button type="button" class="btn btn-info mt-2" data-bs-toggle="popover" title="Sparky's Details" data-bs-content="Sparky is a loyal German Shepherd, great for protection.">More Info</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="modal fade" id="adoptModal" tabindex="-1" aria-labelledby="adoptModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="adoptModalLabel">Adoption Request</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Thank you for your interest in adopting! Please fill out the contact form, and our team will get back to you with the next steps.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <a href="#contact" class="btn btn-primary">Go to Contact Form</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section id="questions" class="container my-5">
+        <h2>Frequently Asked Questions (FAQ's)</h2>
+        <div class="accordion" id="faqAccordion">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        What is the adoption process?
+                    </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        Our adoption process is simple. First, fill out an application, then meet the dogs. After a successful interview and home check, you can adopt the dog.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        What are the adoption fees?
+                    </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        Our adoption fee ranges from $50 to $150 depending on the dog's age and breed. The fee covers vaccinations, spaying/neutering, and other medical expenses.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        Do I need to bring anything when adopting?
+                    </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        Yes, you should bring a valid ID, proof of residence, and a leash or crate to safely transport your new pet.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingFour">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                        How to take care of a new dog?
+                    </button>
+                </h2>
+                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        If you're interested in raising a dog but don't know how to take care of one, here's a small tutorial to help you.
+                        <video controls width="100%" class="rounded">
+                            <source src="video/video1.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingFive">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                        What is Willan fund?
+                    </button>
+                </h2>
+                <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        To learn about Willan fund, click <a href="willan.html" class="link-primary">here</a>.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingSix">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                        Does having a pet have any benefits?
+                    </button>
+                </h2>
+                <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        To learn about a few benefits, listen to the audio below.
+                        <audio controls class="w-100 rounded">
+                            <source src="audio/audio1.mp3" type="audio/mpeg">
+                        </audio>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="container my-5">
+        <h2>Get in touch</h2>
+        <p>You can get in touch with us via the form below:</p>
+        <form action="mailto:info@happypaws.com" method="POST" enctype="text/plain" class="row g-3">
+            <div class="col-md-6">
+                <label for="firstName" class="form-label">First Name *</label>
+                <input type="text" class="form-control" id="firstName" name="name" required>
+            </div>
+            <div class="col-md-6">
+                <label for="lastName" class="form-label">Last Name *</label>
+                <input type="text" class="form-control" id="lastName" name="name" required>
+            </div>
+            <div class="col-md-6">
+                <label for="email" class="form-label">Email *</label>
+                <input type="email" class="form-control" id="email" name="email" required>
+            </div>
+            <div class="col-md-6">
+                <label for="phone" class="form-label">Phone #</label>
+                <input type="tel" class="form-control" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+            </div>
+            <div class="col-12">
+                <label for="message" class="form-label">Message *</label>
+                <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
+            </div>
+            <div class="col-12 text-center">
+                <button type="submit" class="btn btn-primary btn-lg">Submit</button>
+                <div class="d-flex justify-content-center mt-4">
+                    <nav aria-label="Page navigation example">
+                        <ul class="pagination">
+                            <li class="page-item"><a class="page-link" href="index.html">Previous</a></li>
+                            <li class="page-item"><a class="page-link" href="willan.html">Next</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <br><br><br>
+            </div>
+        </form>
+    </section>
+    <footer class="bg-dark text-white text-center py-3">
+        <div class="container">
+            <p>&copy; 2024 PAWSforU Dog Shelter | <a href="mailto:abhishekgade166@gmail.com" class="text-white">info@pawsforu.com</a> | Call us at <a href="tel:+1234567890" class="text-white">123-456-789</a></p>
+            <div class="d-flex justify-content-center">
+                <a href="https://www.facebook.com/" class="btn btn-outline-light btn-sm me-2"><i class="bi bi-facebook"></i> Facebook</a>
+                <a href="https://x.com/home" class="btn btn-outline-light btn-sm me-2"><i class="bi bi-twitter"></i> Twitter</a>
+                <a href="https://www.instagram.com/" class="btn btn-outline-light btn-sm"><i class="bi bi-instagram"></i> Instagram</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+            var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+                return new bootstrap.Popover(popoverTriggerEl)
+            })
+
+            var toastTrigger = document.getElementById('liveToast')
+            var toast = new bootstrap.Toast(toastTrigger)
+            toast.show()
+        });
+    </script>
+</body>
+</html>

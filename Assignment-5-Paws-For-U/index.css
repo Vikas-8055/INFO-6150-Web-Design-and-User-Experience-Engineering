@@ -1,0 +1,150 @@
+.paws .four {
+    font-size: 30px;
+    color: #9f5252;
+    font-style: italic;
+    font-weight: bold;
+    position: relative;
+}
+
+.paws .you {
+    font-size: 20px;
+    position: relative;
+    bottom: -1px;
+    left: 1px;
+    color: #333;
+}
+
+.logo-img {
+    height: 30px;
+    margin-right: 15px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    scroll-behavior: smooth;
+}
+
+h1 {
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+h2 {
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.container-fluid.bg-primary,
+.container-fluid.bg-secondary {
+    background-size: cover;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-link {
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    color: #007bff;
+}
+
+.offcanvas-header {
+    background-color: #f8f9fa;
+}
+
+#heroCarousel .container-fluid {
+    padding: 2rem;
+}
+
+#mission .btn-secondary {
+    margin-top: 1rem;
+}
+
+.card {
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#adopt .card {
+    transition: transform 0.3s;
+}
+
+#adopt .card:hover {
+    transform: translateY(-10px);
+}
+
+.card-title {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.card-text {
+    margin-bottom: 1rem;
+}
+
+.modal-header {
+    background-color: #f8f9fa;
+}
+
+.modal-footer {
+    justify-content: center;
+}
+
+#questions .accordion-button {
+    font-weight: bold;
+}
+
+#contact .form-label {
+    font-weight: bold;
+}
+
+#contact .btn-primary {
+    background-color: #007bff;
+    border: none;
+}
+
+footer {
+    background-color: #343a40;
+    color: #ffffff;
+}
+
+footer a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+.btn-outline-light {
+    border-color: #ffffff;
+    color: #ffffff;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-outline-light:hover {
+    background-color: #ffffff;
+    color: #343a40;
+}
+
+#liveToast {
+    background-color: #f8f9fa;
+    color: #343a40;
+    border-radius: 0.25rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.toast-header {
+    background-color: #007bff;
+    color: #ffffff;
+}
+
+.toast-body {
+    font-weight: bold;
+}

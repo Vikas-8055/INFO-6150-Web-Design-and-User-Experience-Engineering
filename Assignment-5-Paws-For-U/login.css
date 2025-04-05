@@ -1,0 +1,97 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.heading {
+    width: 100%;
+    height: 80px;
+    color: black;
+    background-color: transparent;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    font-size: 40px;
+    position: fixed;
+    padding: 10px;
+    z-index: 1000;
+    top: 0;
+}
+
+.heading .four {
+    font-size: 70px;
+    color: #9f5252;
+    font-style: italic;
+    font-weight: bold;
+    position: relative;
+}
+
+.heading .you {
+    font-size: 20px;
+    position: relative;
+    bottom: -1px;
+    left: 1px;
+    color: #333;
+}
+
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+}
+
+.bg {
+    background-image: url('images/bg.jpeg');
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding-top: 80px;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.85);
+    margin-top: 4px;
+}
+
+#submit-btn, #signup-submit-btn {
+    background-color: #ffaa00;
+    color: black;
+    border: 1px solid black;
+}
+
+#reset-btn {
+    background-color: #ffaa00;
+    color: white;
+    border: 1px solid black;
+}
+
+footer {
+    background-color: black;
+    color: #ffba00;
+    padding: 10px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.pic1 img {
+    height: auto;
+    width: 70%;
+}
+
+.logo-img {
+    height: 60px;
+    margin-right: 15px;
+}

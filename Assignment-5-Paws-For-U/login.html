@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="login.css">
+    <title>Login and Signup</title>
+    <link rel="icon" href="images/favicon.ico">
+    <div class="heading">
+        <img src="images/logo1.jpg" class="logo-img">
+        <p>Paws<span class="four">4<span class="you">U</span></span></p>
+    </div>
+</head>
+<body>
+    <div class="bg">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-header text-center">
+                            <h3>Login to Paws4U</h3>
+                        </div>
+                        <div class="card-body">
+                            <form id="login-form">
+                                <div class="form-group">
+                                    <label for="emailId">Email address:</label>
+                                    <input type="email" class="form-control" id="emailId" placeholder="Enter your email">
+                                    <span id="error_emailId" class="text-danger" style="display:none">Please enter a valid email (@northeastern.edu)</span>
+                                </div>
+                                <div class="form-group">
+                                    <label for="password">Password:</label>
+                                    <input type="password" class="form-control" id="password" placeholder="Enter your password">
+                                    <span id="error_password" class="text-danger" style="display:none">Password is required</span>
+                                </div>
+                                <div class="form-group form-check">
+                                    <input type="checkbox" class="form-check-input" id="remember-me">
+                                    <label class="form-check-label" for="remember-me">Remember me</label>
+                                </div>
+                                <button type="submit" id="submit-btn" class="btn btn-primary btn-block">Login</button>
+                                <button type="button" id="reset-btn" class="btn btn-secondary btn-block">Reset</button>
+                            </form>
+                            <div class="text-center mt-3">
+                                <button type="button" id="signup-btn" class="btn btn-link">Don't have an account? Signup</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2024 Paws4U. All rights reserved.
+    </footer>
+
+    <div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="signupModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="signupModalLabel">Signup for Paws4U</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form id="signup-form">
+                <div class="form-group">
+                    <label for="signupEmail">Email address:</label>
+                    <input type="email" class="form-control" id="signupEmail" placeholder="Enter your email">
+                    <span id="error_signupEmail" class="text-danger" style="display:none">Please enter a valid email (@northeastern.edu)</span>
+                </div>
+                <div class="form-group">
+                    <label for="signupPassword">Password:</label>
+                    <input type="password" class="form-control" id="signupPassword" placeholder="Enter your password">
+                    <span id="error_signupPassword" class="text-danger" style="display:none">Password must be at least 8 characters</span>
+                </div>
+                <div class="form-group">
+                    <label for="confirmPassword">Re-enter Password:</label>
+                    <input type="password" class="form-control" id="confirmPassword" placeholder="Re-enter your password">
+                    <span id="error_confirmPassword" class="text-danger" style="display:none">Passwords do not match</span>
+                </div>
+                <button type="submit" id="signup-submit-btn" class="btn btn-primary btn-block">Signup</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="login.js"></script>
+    <script>
+
+        document.getElementById('login-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const email = document.getElementById('emailId').value;
+            const password = document.getElementById('password').value;
+            const passwordMinLength = 8;
+            const emailRegex = /^[_.A-Za-z0-9-]+(\.[_A-Za-z0-9-]+)*@northeastern.edu$/;
+
+            if (!email.match(emailRegex)) {
+                document.getElementById('error_emailId').style.display = 'block';
+            } else {
+                document.getElementById('error_emailId').style.display = 'none';
+            }
+
+            if (password.length < passwordMinLength) {
+                document.getElementById('error_password').style.display = 'block';
+                document.getElementById('error_password').innerText = 'Password must be at least 8 characters';
+            } else {
+                document.getElementById('error_password').style.display = 'none';
+                document.getElementById('error_password').innerText = '';
+            }
+
+            if (email.match(emailRegex) && password) {
+                window.location.href = 'index.html';
+            }
+        });
+
+        document.getElementById('reset-btn').addEventListener('click', function() {
+            document.getElementById('login-form').reset();
+            document.getElementById('error_emailId').style.display = 'none';
+            document.getElementById('error_password').style.display = 'none';
+        });
+
+        document.getElementById('signup-btn').addEventListener('click', function() {
+            $('#signupModal').modal('show');
+        });
+
+        document.getElementById('signup-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const email = document.getElementById('signupEmail').value;
+            const password = document.getElementById('signupPassword').value;
+            const confirmPassword = document.getElementById('confirmPassword').value;
+            const passwordMinLength = 8;
+            const emailRegex = /^[_.A-Za-z0-9-]+(\.[_A-Za-z0-9-]+)*@northeastern.edu$/;
+
+            if (!email.match(emailRegex)) {
+                document.getElementById('error_signupEmail').style.display = 'block';
+            } else {
+                document.getElementById('error_signupEmail').style.display = 'none';
+            }
+
+            if (password.length < passwordMinLength) {
+                document.getElementById('error_signupPassword').style.display = 'block';
+            } else {
+                document.getElementById('error_signupPassword').style.display = 'none';
+            }
+
+            if (password !== confirmPassword) {
+                document.getElementById('error_confirmPassword').style.display = 'block';
+            } else {
+                document.getElementById('error_confirmPassword').style.display = 'none';
+            }
+
+            if (email.match(emailRegex) && password.length >= passwordMinLength && password === confirmPassword) {
+                alert('Signup successful! Please login.');
+                $('#signupModal').modal('hide');
+            }
+        });
+    </script>
+</body>
+</html>
